@@ -1,0 +1,24 @@
+:root{
+  /* Primary Colors */
+    --stellar-explorer: hsl(194, 78%, 11%);
+    --midsummer-night: hsl(195, 23%, 28%);
+    --legacy-blue:hsl(196, 46%, 73%);
+    --bridal-veil: hsl(10, 11%, 89%);
+    --ivory-tower: hsl(20, 37%, 97%);
+    --blanc: hsl(0, 0%, 100%);
+
+    /* Accent Colors */
+    --salmon: hsl(22, 99%, 72%);
+    --powdered-peach: hsl(22, 100%, 91%);
+    --seashell: hsl(24, 100%, 97%);
+
+    --text-gradient: linear-gradient(107deg, var(--salmon) -11.37%, var(--stellar-explorer) 61.84%);
+    --default-gradient: linear-gradient(90deg, var(--powdered-peach) 0%, var(--seashell)100%);
+    --card-gradient:linear-gradient(135deg, var(--bridal-veil) 65%, var(--legacy-blue) 100%);
+
+    /* Typography */
+
+    /* Font Family */
+    --default-font-body: 'Inter', sans-serif;
+    --default-font-display: 'Martian Mono', serif;
+}
