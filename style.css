@@ -85,6 +85,7 @@ input, button, textarea, select {
 /* 8. Avoid text overflows */
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
+  font-family: "Martian Mono", "Inter", sans-serif;
 }
 
 /* 9. Improve line wrapping */
@@ -157,7 +158,6 @@ nav{
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    font-family: "Martian Mono", "Inter", sans-serif;
   }
   p{
     max-width: 80ch;
@@ -192,3 +192,77 @@ nav{
   align-items: center;
   gap: 10px;
 }
+
+/* features */
+.wrapper{
+  display: grid;
+  gap: 66px;
+}
+.features{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding: 22px;
+  max-width: 1300px;
+  margin-inline: auto;
+  & > *{
+    flex: 1;
+  }
+  div h2{
+    font-size: 3.55rem;
+    color: var(--stellar-explorer);
+  }
+  figure {
+    max-width: 90%;
+    img{
+      border-radius: 20px;
+    }
+  }
+
+}
+.features-list{
+  list-style: none;
+  padding-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+
+}
+.features-list li{
+  font-size: 1.25rem;
+  color: var(--midsummer-night);
+
+  background-image: url('assets/media/icons/icon-check.svg');
+  background-position: center left;
+  background-repeat: no-repeat;
+    padding-left: 42px;
+
+}
+.reverse {
+  flex-direction: row-reverse;
+  margin-top: 0;
+  div{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    p{
+        font-size: 1.25rem;
+  color: var(--midsummer-night);
+    }
+  }
+  figure{
+    grid-column: 2/3;
+     grid-row: 1/2;
+  }
+}
+.reverse div h2 span{
+  background-image: url(assets/media/images/pattern-circle.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* features */
