@@ -1,53 +1,70 @@
-:root{
+:root {
   /* Primary Colors */
-    --stellar-explorer: hsl(194, 78%, 11%);
-    --midsummer-night: hsl(195, 23%, 28%);
-    --legacy-blue:hsl(196, 46%, 73%);
-    --bridal-veil: hsl(10, 11%, 89%);
-    --ivory-tower: hsl(20, 37%, 97%);
-    --blanc: hsl(0, 0%, 100%);
+  --stellar-explorer: hsl(194, 78%, 11%);
+  --midsummer-night: hsl(195, 23%, 28%);
+  --legacy-blue: hsl(196, 46%, 73%);
+  --bridal-veil: hsl(10, 11%, 89%);
+  --ivory-tower: hsl(20, 37%, 97%);
+  --blanc: hsl(0, 0%, 100%);
 
-    /* Accent Colors */
-    --salmon: hsl(22, 99%, 72%);
-    --powdered-peach: hsl(22, 100%, 91%);
-    --seashell: hsl(24, 100%, 97%);
+  /* Accent Colors */
+  --salmon: hsl(22, 99%, 72%);
+  --powdered-peach: hsl(22, 100%, 91%);
+  --seashell: hsl(24, 100%, 97%);
 
-    --text-gradient: linear-gradient(107deg, var(--salmon) -11.37%, var(--stellar-explorer) 61.84%);
-    --default-gradient: linear-gradient(90deg, var(--powdered-peach) 0%, var(--seashell)100%);
-    --card-gradient:linear-gradient(135deg, var(--bridal-veil) 65%, var(--legacy-blue) 100%);
+  --text-gradient: linear-gradient(
+    107deg,
+    var(--salmon) -11.37%,
+    var(--stellar-explorer) 61.84%
+  );
+  --default-gradient: linear-gradient(
+    90deg,
+    var(--powdered-peach) 0%,
+    var(--seashell) 100%
+  );
+  --card-gradient: linear-gradient(
+    135deg,
+    var(--bridal-veil) 65%,
+    var(--legacy-blue) 100%
+  );
 
-    /* Typography */
+  /* Typography */
 
-    /* Font Family */
-    --default-font-body: 'Inter', sans-serif;
-    --default-font-display: 'Martian Mono', serif;
+  /* Font Family */
+  --default-font-body: "Inter", sans-serif;
+  --default-font-display: "Martian Mono", serif;
 }
 
 /* Font Imports */
 @font-face {
-  font-family: 'Inter';
-  src: url('assets/fonts/inter/Inter-VariableFont_opsz,wght.ttf') format('truetype-variations');
+  font-family: "Inter";
+  src: url("assets/fonts/inter/Inter-VariableFont_opsz,wght.ttf")
+    format("truetype-variations");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url('assets/fonts/inter/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype-variations');
+  font-family: "Inter";
+  src: url("assets/fonts/inter/Inter-Italic-VariableFont_opsz,wght.ttf")
+    format("truetype-variations");
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Martian Mono';
-  src: url('assets/fonts/martian-mono/MartianMono-VariableFont_wdth\,wght.ttf') format('truetype-variations');
+  font-family: "Martian Mono";
+  src: url("assets/fonts/martian-mono/MartianMono-VariableFont_wdth\,wght.ttf")
+    format("truetype-variations");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -72,18 +89,31 @@ body {
 }
 
 /* 6. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
 /* 7. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /* 8. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
   font-family: "Martian Mono", "Inter", sans-serif;
 }
@@ -92,13 +122,19 @@ p, h1, h2, h3, h4, h5, h6 {
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
-ul, ol {
+ul,
+ol {
   padding-left: 0;
 }
-p{
+p {
   font-size: 20px;
 }
 .hero {
@@ -106,51 +142,50 @@ p{
   flex-direction: column;
 
   padding: 33px 66px;
-  & > *{
-      max-width: 1300px;
-  margin: 0 auto;
+  & > * {
+    max-width: 1300px;
+    margin: 0 auto;
   }
 }
-nav{
+nav {
   width: 100%;
   padding-bottom: 66px;
 }
-.book-bg{
-  background-image: url(assets/media/images/pattern-light-bg.svg) , url(assets/media/images/pattern-glow.svg);
+.book-bg {
+  background-image: url(assets/media/images/pattern-light-bg.svg),
+    url(assets/media/images/pattern-glow.svg);
   background-color: rgb(250, 245, 243);
   overflow-x: clip;
   background-repeat: no-repeat;
   background-size: cover, contain;
   background-position: center center, 150% 230px;
-  
 }
-.hero-content{
+.hero-content {
   display: flex;
   align-items: center;
   justify-content: center;
   padding-bottom: 33px;
   gap: 66px;
-  & > *{
+  & > * {
     flex: 1;
   }
 }
-.hero-image{
+.hero-image {
   padding-inline: 20px;
 }
-.img-1{
+.img-1 {
   object-fit: cover;
   width: 100%;
   border-radius: 20px;
-  
 }
 
-.hero-content-text{
+.hero-content-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 1.5rem;
-  h1{
+  h1 {
     font-size: 3.75rem;
     line-height: 1.2;
     max-width: 14ch;
@@ -159,13 +194,13 @@ nav{
     -webkit-background-clip: text;
     color: transparent;
   }
-  p{
+  p {
     max-width: 80ch;
     color: var(--midsummer-night);
   }
 }
 
-.to-membership{
+.to-membership {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,24 +216,25 @@ nav{
   margin-bottom: 25px;
   font-size: 1.15rem;
 }
-.to-membership:hover{
+.to-membership:hover {
   background-image: var(--default-gradient);
 }
 
-.members, .stars-row{
+.members,
+.stars-row {
   display: flex;
 }
-.members{
+.members {
   align-items: center;
   gap: 10px;
 }
 
 /* features */
-.wrapper{
+.wrapper {
   display: grid;
   gap: 66px;
 }
-.features{
+.features {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -209,60 +245,127 @@ nav{
   padding: 22px;
   max-width: 1300px;
   margin-inline: auto;
-  & > *{
-    flex: 1;
-  }
-  div h2{
-    font-size: 3.55rem;
+
+  div h2 {
+    font-size: 3.15rem;
     color: var(--stellar-explorer);
+    margin-bottom: 1rem;
   }
   figure {
-    max-width: 90%;
-    img{
+    position: relative;
+    img {
+      max-width: 90%;
       border-radius: 20px;
+      display: grid;
+      place-items: center;
     }
   }
-
 }
-.features-list{
+.features-list {
   list-style: none;
   padding-block: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-
-
+  gap: 1.25rem;
 }
-.features-list li{
+.features-list li {
   font-size: 1.25rem;
   color: var(--midsummer-night);
-
-  background-image: url('assets/media/icons/icon-check.svg');
+  max-width: 35ch;
+  background-image: url("assets/media/icons/icon-check.svg");
   background-position: center left;
   background-repeat: no-repeat;
-    padding-left: 42px;
-
+  padding-left: 42px;
 }
 .reverse {
-  flex-direction: row-reverse;
   margin-top: 0;
-  div{
+  div {
     grid-column: 1/2;
     grid-row: 1/2;
-    p{
-        font-size: 1.25rem;
-  color: var(--midsummer-night);
+    p {
+      font-size: 1rem;
+      color: var(--midsummer-night);
     }
   }
-  figure{
+  figure {
     grid-column: 2/3;
-     grid-row: 1/2;
+    grid-row: 1/2;
   }
 }
-.reverse div h2 span{
+.reverse div h2 span {
   background-image: url(assets/media/images/pattern-circle.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
+#tech_logos {
+  position: absolute;
+  bottom: -20px;
+  left: -10%;
+
+  max-width: 600px;
+}
 /* features */
+
+/* journey */
+
+.journey {
+  max-width: 1200px;
+  margin-inline: auto;
+  width: 100%;
+  background-image: url(assets/media/images/pattern-light-bg.svg),
+    url(assets/media/images/pattern-glow.svg);
+  background-color: rgb(250, 245, 243);
+  overflow-x: clip;
+  background-repeat: no-repeat;
+  background-size: cover, 50%;
+  background-position: center center, 120% 10px;
+
+  padding: 52px;
+  display: grid;
+  place-items: center;
+  gap: 3rem;
+  h3 {
+    font-size: 2.75rem;
+    color: var(--stellar-explorer);
+    max-width: 15ch;
+    text-align: center;
+  }
+  ol {
+    list-style: none;
+    display: grid;
+    justify-content: flex-start;
+    align-items: center;
+    grid-template-columns: repeat(4, 200px);
+    gap: 4rem;
+  }
+}
+.journey ol li {
+  position: relative;
+  font-weight: 700;
+  color: var(--midsummer-night);
+  span:nth-child(1) {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--midsummer-night);
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-family: "Martian Mono", "Inter", sans-serif;
+    margin-bottom: 15px;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    right: 0%;
+  }
+  span:last-of-type {
+    font-size: 1.25rem;
+    color: var(--stellar-explorer);
+  }
+}
+
+/* journey */
