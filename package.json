@@ -1,0 +1,20 @@
+{
+  "name": "teck-book-club-landing-page",
+  "version": "1.0.0",
+  "description": "a landing page practice",
+  "homepage": "https://github.com/Silkiercomet/definitive-tech-book-club#readme",
+  "bugs": {
+    "url": "https://github.com/Silkiercomet/definitive-tech-book-club/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Silkiercomet/definitive-tech-book-club.git"
+  },
+  "license": "ISC",
+  "author": "luis colina",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
