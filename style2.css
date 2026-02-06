@@ -1,0 +1,199 @@
+:root {
+  /* Primary Colors */
+  --stellar-explorer: hsl(194, 78%, 11%);
+  --midsummer-night: hsl(195, 23%, 28%);
+  --legacy-blue: hsl(196, 46%, 73%);
+  --bridal-veil: hsl(10, 11%, 89%);
+  --ivory-tower: hsl(20, 37%, 97%);
+  --blanc: hsl(0, 0%, 100%);
+
+  /* Accent Colors */
+  --salmon: hsl(22, 99%, 72%);
+  --powdered-peach: hsl(22, 100%, 91%);
+  --seashell: hsl(24, 100%, 97%);
+
+  --text-gradient: linear-gradient(
+    107deg,
+    var(--salmon) -11.37%,
+    var(--stellar-explorer) 61.84%
+  );
+  --default-gradient: linear-gradient(
+    90deg,
+    var(--powdered-peach) 0%,
+    var(--seashell) 100%
+  );
+  --card-gradient: linear-gradient(
+    135deg,
+    var(--bridal-veil) 65%,
+    var(--legacy-blue) 100%
+  );
+
+  /* Typography */
+
+  /* Font Family */
+  --default-font-body: "Inter", sans-serif;
+  --default-font-display: "Martian Mono", serif;
+}
+
+/* Font Imports */
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/inter/Inter-VariableFont_opsz,wght.ttf")
+    format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/inter/Inter-Italic-VariableFont_opsz,wght.ttf")
+    format("truetype-variations");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Martian Mono";
+  src: url("assets/fonts/martian-mono/MartianMono-VariableFont_wdth\,wght.ttf")
+    format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: "Inter", sans-serif;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  font-family: "Martian Mono", "Inter", sans-serif;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+ul,
+ol {
+  padding-left: 0;
+  list-style: none;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+/* hero */
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: url(assets/media/images/pattern-light-bg.svg), url(assets/media/images/pattern-glow.svg), var(--seashell);
+    background-size: cover, contain;
+    background-position: center, bottom ;
+    background-repeat: no-repeat;
+    gap: 1.5rem;
+    padding: 6rem;
+  
+
+    .hero-picture{
+        flex: 1;
+        position: relative;
+
+    }
+
+    .hero-content{
+        flex: 1;
+
+    }
+}
+
+.hero-content{
+    display: grid;
+    gap: 1rem;
+
+    h1{
+    font-size: 3.5rem;
+    background-image: var(--text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    }
+}
+.hero-picture{
+
+    picture img{
+        width: 90%;
+        border-radius: 1.2rem;
+    }
+    
+}
+/* hero */
+
+/* ultra-wide screens */
+
+@media screen and (width > 87.5rem) {
+    .hero-picture, .hero-content{
+        max-width: 640px;
+    }
+}
+
+/* ultra-wide screens */
